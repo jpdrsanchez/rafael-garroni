@@ -1,0 +1,21 @@
+.menu {
+  display: flex;
+  align-self: flex-end;
+  align-items: center;
+  &__mobile-btn {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    margin-right: 1.875rem;
+  }
+
+  &__link {
+    line-height: 1.25;
+    text-transform: uppercase;
+  }
+}

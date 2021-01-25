@@ -1,0 +1,62 @@
+.footer {
+  padding: 2.3125rem 4.6875rem 1.5rem 4.6875rem;
+
+  &__content {
+    img {
+      margin-bottom: 3.75rem;
+    }
+
+    p {
+      letter-spacing: -0.02em;
+      line-height: 2.81;
+    }
+  }
+
+  &__container {
+    padding-bottom: 3.75rem;
+    border-bottom: 0.125rem solid #4f4f4f;
+
+    .menu__list {
+      margin-left: auto;
+    }
+
+    .menu__item {
+      display: flex;
+      align-items: center;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &::before {
+        content: '•';
+        margin-right: 0.25rem;
+      }
+    }
+  }
+
+  &__copy {
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+
+    .menu__list {
+      justify-content: center;
+    }
+
+    .menu__item {
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__noweb {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    p {
+      margin-right: 0.625rem;
+    }
+  }
+}

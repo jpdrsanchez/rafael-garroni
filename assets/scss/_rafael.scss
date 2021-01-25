@@ -1,0 +1,70 @@
+.rafael-hero {
+  height: 721px;
+  background-color: #030303;
+  background-image: url('./images/rafael-garroni/bg.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto;
+  transition: all 0.5s;
+
+  &:hover {
+    background-image: url('./images/rafael-garroni/bg-hover.png');
+  }
+
+  &__title {
+    text-indent: -999999px;
+  }
+}
+
+.rafael-garroni {
+  padding-top: 4.375rem;
+  h1 {
+    color: #828282;
+    font-size: 1.875rem;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 120px;
+      display: block;
+      width: 120px;
+      height: 1px;
+      background-color: var(--white);
+      margin-left: 1.75rem;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      width: 120px;
+      height: 1px;
+      background-color: var(--white);
+      margin-right: 1.75rem;
+    }
+  }
+
+  h2 {
+    font-size: 6rem;
+    font-weight: 200;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 3.75rem;
+  }
+
+  p {
+    font-size: 1.125rem;
+    line-height: 2.5;
+    letter-spacing: -0.02em;
+    text-align: center;
+    margin-bottom: 5.625rem;
+  }
+}

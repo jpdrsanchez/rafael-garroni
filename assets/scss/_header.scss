@@ -1,0 +1,22 @@
+.header {
+  padding-top: 1.125rem;
+  padding-bottom: 2.375rem;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.logo {
+  display: flex;
+  &::before {
+    content: '';
+    display: block;
+    width: 65px;
+    height: 1px;
+    background-color: var(--white);
+    align-self: flex-end;
+    margin: 0 1rem 0.4375rem -0.75rem;
+  }
+}
