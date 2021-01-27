@@ -159,42 +159,36 @@
     </div>
   </header>
 
-  <section class="localizacao">
-    <div class="container">
-      <h1>Localizações</h1>
-      <h2>Visite seu sonho</h2>
-      <div class="row justify-content-center">
-        <div class="col-10">
-          <div class="localizacao__container">
-            <img src="./assets/images/localizacao/mapa-sp.png" alt="Localização em São Paulo">
-            <div class="localizacao__info">
-              <h3>São Paulo</h3>
-              <ul>
-                <li>R. Prof. João de Oliveira Tôrres, 355</li>
-                <li>Vila Reg. Feijó, São Paulo - SP</li>
-                <li>03337-010</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+  <main class="contato">
+    <form action="/" class="contato__form" id="contato">
+      <h1>Contato</h1>
+      <h2>Sonhe</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam orci velit magna libero, imperdiet euismod sapien sed.</p>
+      <div class="contato__form--block">
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="nome">
       </div>
-      <div class="row justify-content-center">
-        <div class="col-10">
-          <div class="localizacao__container">
-            <img src="./assets/images/localizacao/mapa-pa.png" alt="Localização em Pouso Alegre">
-            <div class="localizacao__info">
-              <h3>Pouso Alegre</h3>
-              <ul>
-                <li>Av. Ver. Dr. Argentino de Paula, 60</li>
-                <li>Jardim Altaville, Pouso Alegre - MG</li>
-                <li>37552-078</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+      <div class="contato__form--block">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
       </div>
-    </div>
-  </section>
+      <div class="contato__form--block">
+        <label for="telefone">Telefone</label>
+        <input type="tel" name="telefone" id="telefone">
+      </div>
+      <select name="vestido" id="vestido">
+        <option value="" disabled selected>Selecione o tipo de vestido</option>
+        <option value="noiva">Noiva</option>
+        <option value="debutante">Debutante</option>
+        <option value="Festas">Festas</option>
+      </select>
+      <div class="contato__form--block">
+        <label for="mensagem">Mensagem</label>
+        <textarea name="mensagem" id="mensagem"></textarea>
+      </div>
+      <button type="submit">Entre em contato</button>
+    </form>
+  </main>
 
   <footer class="footer">
     <div class="container-fluid footer__container">

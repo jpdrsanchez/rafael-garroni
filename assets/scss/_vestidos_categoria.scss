@@ -1,0 +1,114 @@
+.vestidos-categoria {
+  padding-top: 5.625rem;
+  padding-bottom: 5.625rem;
+  text-align: center;
+  background: #222;
+
+  h1 {
+    color: #828282;
+    font-size: 1.875rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 1.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 120px;
+      display: block;
+      width: 120px;
+      height: 1px;
+      background-color: var(--white);
+      margin-left: 1.75rem;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      width: 120px;
+      height: 1px;
+      background-color: var(--white);
+      margin-right: 1.75rem;
+    }
+  }
+
+  h2 {
+    font-size: 6rem;
+    font-weight: 200;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    margin-bottom: 5.625rem;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 7%;
+    padding-left: 8.3333337%;
+    padding-right: 8.3333337%;
+  }
+
+  &__column {
+    &:nth-child(2) {
+      margin-top: 5rem;
+    }
+  }
+
+  &__item {
+    height: 574px;
+    overflow: hidden;
+    background-color: #333;
+
+    a {
+      display: block;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &--text {
+      padding: 1.25rem;
+
+      h3 {
+        font-size: 2rem;
+        letter-spacing: -0.02em;
+        margin: 0;
+        width: 100%;
+        text-transform: uppercase;
+
+        &::after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 1px;
+          background: var(--white);
+          margin-top: 1.875rem;
+          margin-bottom: 3.125rem;
+        }
+      }
+
+      p {
+        line-height: 2.5;
+        letter-spacing: -0.02em;
+      }
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 5rem;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}

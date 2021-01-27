@@ -2,6 +2,8 @@
   display: flex;
   align-self: flex-end;
   align-items: center;
+  position: relative;
+  z-index: 500;
 
   &__mobile-btn {
     display: none;

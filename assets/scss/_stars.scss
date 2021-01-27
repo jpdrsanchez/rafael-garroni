@@ -11,6 +11,11 @@
   bottom: 0;
   overflow: hidden;
 
+  &.interna {
+    left: 50%;
+    top: 30%;
+  }
+
   &:last-of-type {
     left: 50%;
     top: 20%;
