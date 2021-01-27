@@ -153,6 +153,10 @@
             height: 100%;
             object-fit: cover;
             object-position: center;
+
+            @media (max-width: 991px) {
+              height: auto;
+            }
           }
         }
       }
@@ -181,6 +185,10 @@
             height: 100%;
             object-fit: cover;
             object-position: center;
+
+            @media (max-width: 991px) {
+              height: auto;
+            }
           }
         }
       }
