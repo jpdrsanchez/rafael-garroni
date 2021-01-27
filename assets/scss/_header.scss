@@ -10,6 +10,13 @@
 
 .logo {
   display: flex;
+
+  &__image {
+    flex: 0 0 200px;
+    max-width: 200px;
+    height: auto;
+  }
+
   &::before {
     content: '';
     display: block;

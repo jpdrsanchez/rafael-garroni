@@ -1,24 +1,24 @@
 .rafael-hero {
-  height: 321px;
+  height: 221px;
   background-color: #030303;
   background-image: url('./images/rafael-garroni/bg.png');
   background-repeat: no-repeat;
   background-position: center bottom;
-  background-size: contain;
+  background-size: 100% auto;
   transition: all 0.5s;
 
-  @media (min-width: 576px) {
-    background-size: cover;
+  @media (min-width: 576px) and (max-width: 767px) {
+    height: 321px;
   }
 
-  @media (min-width: 992px) {
-    height: 521px;
+  @media (min-width: 992px) and (max-width: 1199px) {
+    height: 570px;
   }
 
   @media (min-width: 1200px) {
+    height: 721px;
     background-size: auto;
     background-position: center center;
-    height: 721px;
   }
 
   &:hover {
@@ -35,6 +35,14 @@
   padding-bottom: 4.25rem;
   text-align: center;
   background: #222;
+
+  .container {
+    & > p {
+      max-width: 1164px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
 
   h1 {
     color: #828282;
@@ -210,11 +218,13 @@
           height: 100%;
           object-fit: cover;
           object-position: center;
+          width: 100%;
         }
       }
 
       &:last-child {
         @media (min-width: 768px) {
+          width: 100%;
           height: 100%;
           object-fit: cover;
           object-position: center;

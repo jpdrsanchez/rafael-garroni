@@ -92,10 +92,15 @@
         h3 {
           font-size: 3.125rem;
           text-shadow: 0px 0px 20px var(--white);
+          transition: all 2s;
 
           @media (max-width: 1199px) {
             font-size: 2rem;
           }
+        }
+
+        img {
+          animation: scaleImage 2s forwards;
         }
       }
     }
@@ -111,10 +116,6 @@
       @media (max-width: 767px) {
         opacity: 1;
       }
-
-      &:hover {
-        animation: scaleImage 0.5s forwards;
-      }
     }
 
     h3 {
@@ -129,7 +130,7 @@
       margin-bottom: 0;
       display: flex;
       align-items: center;
-      transition: all 0.2s;
+      transition: none;
 
       @media (max-width: 1199px) {
         font-size: 1.5rem;
