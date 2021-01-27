@@ -12,7 +12,6 @@
   &__list {
     display: flex;
     margin-right: 2rem;
-
     &:last-of-type {
       @media (max-width: 619px) {
         display: none;
@@ -69,6 +68,7 @@
     }
 
     &__wrapper {
+      overflow-y: auto;
       display: none;
       position: fixed;
       top: 0;
@@ -77,16 +77,22 @@
       height: 100vh;
       background-color: rgba(0, 0, 0, 0.3);
       grid-template-columns: 1fr 1fr;
+      align-items: stretch;
       z-index: 9999;
+
+      @media (max-width: 991px) {
+        grid-template-columns: 1fr;
+      }
+
       &.active {
         display: grid;
       }
 
       h2 {
-        font-size: 1.375rem;
+        font-size: 1.25rem;
         color: #828282;
         text-transform: uppercase;
-        margin-bottom: 2.5rem;
+        margin-bottom: 2rem;
       }
 
       ul {
@@ -97,6 +103,16 @@
         align-items: stretch;
         justify-content: center;
         padding-left: calc(8.3333337% + 2rem);
+
+        @media (max-width: 619px) {
+          display: flex !important;
+        }
+
+        @media (max-width: 991px) {
+          text-align: center;
+          padding-left: 0;
+          padding-top: 3rem;
+        }
 
         li {
           margin: 0;
@@ -110,14 +126,18 @@
           flex-direction: row;
           justify-content: start;
 
+          @media (max-width: 991px) {
+            justify-content: center;
+          }
+
           li {
-            margin-right: 2rem;
+            margin-right: 1.5rem;
           }
         }
 
         a {
           position: relative;
-          font-size: 2.75rem;
+          font-size: 2rem;
           font-weight: 200;
           transition: all 0.3s;
           z-index: 999;
@@ -133,8 +153,13 @@
       background: var(--bodyBg);
       overflow: hidden;
 
+      @media (max-width: 991px) {
+        display: none;
+      }
+
       & > div {
         position: relative;
+        height: 100%;
 
         img {
           &:first-of-type {
@@ -148,7 +173,7 @@
 
           &:last-of-type {
             position: absolute;
-            top: 7%;
+            top: 15%;
             left: calc(50% - (396px / 2));
             height: 70%;
             width: 396px;
@@ -192,9 +217,13 @@
     flex-shrink: 0;
     text-align: center;
     font-family: 'EngraversGothic BT', sans-serif;
-    font-size: 5rem;
+    font-size: 3rem;
     text-transform: uppercase;
     color: var(--white);
+
+    @media (min-width: 1200px) {
+      font-size: 5rem;
+    }
   }
 }
 
