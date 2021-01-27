@@ -46,6 +46,13 @@
         margin-left: 1rem;
       }
 
+      @media (max-width: 575px) {
+        margin-right: 0;
+      }
+      @media (min-width: 576px) and (max-width: 991px) {
+        margin-right: 2rem;
+      }
+
       &:focus {
         outline: none;
       }
