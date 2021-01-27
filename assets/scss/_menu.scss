@@ -12,6 +12,12 @@
   &__list {
     display: flex;
     margin-right: 2rem;
+
+    &:last-of-type {
+      @media (max-width: 619px) {
+        display: none;
+      }
+    }
   }
 
   &__item {
@@ -35,6 +41,11 @@
       text-transform: uppercase;
       display: flex;
       align-items: center;
+
+      @media (max-width: 619px) {
+        margin-left: 1rem;
+      }
+
       &:focus {
         outline: none;
       }
@@ -185,6 +196,30 @@
 
   &.active {
     display: block;
+  }
+}
+
+.menu-primary {
+  .menu__list {
+    &:first-of-type {
+      display: none;
+      @media (min-width: 1200px) {
+        display: flex;
+      }
+    }
+  }
+
+  .menu-secondary__button {
+    @media (max-width: 575px) {
+      margin-right: 0;
+    }
+    @media (min-width: 576px) and (max-width: 991px) {
+      margin-right: 2rem;
+    }
+
+    @media (min-width: 1200px) {
+      display: none;
+    }
   }
 }
 
