@@ -15,6 +15,13 @@
     left: 50%;
     top: 20%;
   }
+
+  &:only-of-type {
+    top: 0;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+  }
 }
 
 .firefly {
@@ -37,7 +44,7 @@
   transform-origin: -10vw;
 }
 .firefly::before {
-  background: black;
+  background: none;
   opacity: 0.4;
   animation: drift ease alternate infinite;
 }

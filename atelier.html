@@ -34,19 +34,117 @@
           <img class="logo__image" src="./assets/images/garroni-logo.png" alt="Rafael Garroni Atelier Logo">
         </div>
       </div>
-      <nav class="header__nav menu">
+      <nav class="header__nav menu menu-secondary">
         <a class="menu__mobile-btn" href="#" aria-label="Abrir menu"></a>
-        <ul class="menu__list">
-          <li class="menu__item"><a href="index.html" class="menu__link">Home</a></li>
-          <li class="menu__item"><a href="rafael-garroni.html" class="menu__link">Rafael Garroni</a></li>
-          <li class="menu__item"><a href="atelier.html" class="menu__link">Atelier</a></li>
-          <li class="menu__item"><a href="#" class="menu__link">Vestidos</a></li>
-          <li class="menu__item"><a href="#" class="menu__link">Localização</a></li>
-          <li class="menu__item"><a href="#" class="menu__link">Contato</a></li>
-        </ul>
+        <div class="menu-secondary__wrapper" data-menu="body">
+          <div class="menu-secondary__image">
+            <div class="tabItem active" data-tab="intro">
+              <img src="./assets/images/menu/image-intro.png" alt="Intro">
+              <img src="./assets/images/menu/image-intro.png" alt="Intro">
+              <div class="marquee">
+                <span>Rafael Garroni</span>
+                <span>Rafael Garroni</span>
+                <span>Rafael Garroni</span>
+              </div>
+            </div>
+            <div class="tabItem" data-tab="home">
+              <img src="./assets/images/menu/home.png" alt="Home">
+              <img src="./assets/images/menu/home.png" alt="Home">
+              <div class="marquee">
+                <span>Rafael Garroni</span>
+                <span>Rafael Garroni</span>
+                <span>Rafael Garroni</span>
+              </div>
+            </div>
+            <div class="tabItem" data-tab="rafael">
+              <img src="./assets/images/menu/rafael-garroni.png" alt="Rafael Garroni">
+              <img src="./assets/images/menu/rafael-garroni.png" alt="Rafael Garroni">
+              <div class="marquee">
+                <span>Rafael Garroni</span>
+                <span>Rafael Garroni</span>
+                <span>Rafael Garroni</span>
+              </div>
+            </div>
+            <div class="tabItem" data-tab="atelier">
+              <img src="./assets/images/menu/atelier.png" alt="Atelier">
+              <img src="./assets/images/menu/atelier.png" alt="Atelier">
+              <div class="marquee">
+                <span>Rafael Garroni</span>
+                <span>Rafael Garroni</span>
+                <span>Rafael Garroni</span>
+              </div>
+            </div>
+            <div class="tabItem" data-tab="vestidos">
+              <img src="./assets/images/menu/vestidos.png" alt="Vestido">
+              <img src="./assets/images/menu/vestidos.png" alt="Vestido">
+              <div class="marquee">
+                <span>Rafael Garroni</span>
+                <span>Rafael Garroni</span>
+                <span>Rafael Garroni</span>
+              </div>
+            </div>
+            <div class="tabItem" data-tab="localizacao">
+              <img src="./assets/images/menu/localizacao.png" alt="Localização">
+              <img src="./assets/images/menu/localizacao.png" alt="Localização">
+              <div class="marquee">
+                <span>Rafael Garroni</span>
+                <span>Rafael Garroni</span>
+                <span>Rafael Garroni</span>
+              </div>
+            </div>
+            <div class="tabItem" data-tab="contato">
+              <img src="./assets/images/menu/contato.png" alt="Contato">
+              <img src="./assets/images/menu/contato.png" alt="Contato">
+              <div class="marquee">
+                <span>Rafael Garroni</span>
+                <span>Rafael Garroni</span>
+                <span>Rafael Garroni</span>
+              </div>
+            </div>
+          </div>
+          <ul class="menu__list" data-tab="menu">
+            <div class="stars-container">
+              <div class="firefly"></div>
+              <div class="firefly"></div>
+              <div class="firefly"></div>
+              <div class="firefly"></div>
+              <div class="firefly"></div>
+              <div class="firefly"></div>
+              <div class="firefly"></div>
+              <div class="firefly"></div>
+              <div class="firefly"></div>
+              <div class="firefly"></div>
+              <div class="firefly"></div>
+              <div class="firefly"></div>
+              <div class="firefly"></div>
+              <div class="firefly"></div>
+              <div class="firefly"></div>
+            </div>
+            <h2>Menu</h2>
+            <li class="menu__item"><a href="index.html" class="menu__link" id="home">Home</a></li>
+            <li class="menu__item"><a href="rafael-garroni.html" class="menu__link" id="rafael">Rafael Garroni</a></li>
+            <li class="menu__item"><a href="atelier.html" class="menu__link" id="atelier">Atelier</a></li>
+            <li class="menu__item"><a href="vestidos.html" class="menu__link" id="vestidos">Vestidos</a></li>
+            <li class="menu__item"><a href="localizacao.html" class="menu__link" id="localizacao">Localização</a></li>
+            <li class="menu__item"><a href="contato.html" class="menu__link" id="contato">Contato</a></li>
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a href="#" class="menu__link">
+                  <img src="./assets/images/facebook.svg" alt="Facebook">
+                </a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link" data-social>
+                  <img src="./assets/images/instagram.svg" alt="Instagram">
+                </a>
+              </li>
+            </ul>
+          </ul>
+          <button data-menu="close" class="menu-secondary__close">Fechar</button>
+        </div>
         <ul class="menu__list">
           <li class="menu__item">
-            <a href="#" class="menu__link">
+            <a href="#" class="menu__link" data-social>
               <img src="./assets/images/facebook.svg" alt="Facebook">
             </a>
           </li>
@@ -56,6 +154,7 @@
             </a>
           </li>
         </ul>
+        <button class="menu-secondary__button" data-menu="open">Menu</button>
       </nav>
     </div>
   </header>

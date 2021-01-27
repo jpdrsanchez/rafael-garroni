@@ -2,12 +2,14 @@
   display: flex;
   align-self: flex-end;
   align-items: center;
+
   &__mobile-btn {
     display: none;
   }
 
   &__list {
     display: flex;
+    margin-right: 2rem;
   }
 
   &__item {
@@ -17,5 +19,190 @@
   &__link {
     line-height: 1.25;
     text-transform: uppercase;
+  }
+
+  &-secondary {
+    &__button {
+      display: block;
+      border: none;
+      background: none;
+      color: var(--white);
+      margin-right: 4.6875rem;
+      font-size: 1.5rem;
+      font-family: 'EngraversGothic BT', sans-serif;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      &:focus {
+        outline: none;
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        width: 30px;
+        height: 2px;
+        background-color: var(--white);
+        margin-left: 1.375rem;
+        box-shadow: 0 8px currentColor, 0 -8px currentColor;
+      }
+    }
+
+    &__wrapper {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.3);
+      grid-template-columns: 1fr 1fr;
+      z-index: 9999;
+      &.active {
+        display: grid;
+      }
+
+      h2 {
+        font-size: 1.375rem;
+        color: #828282;
+        text-transform: uppercase;
+        margin-bottom: 2.5rem;
+      }
+
+      ul {
+        margin: 0;
+        background: #333;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        padding-left: calc(8.3333337% + 2rem);
+
+        li {
+          margin: 0;
+          &:not(:last-child) {
+            margin-bottom: 2.375rem;
+          }
+        }
+
+        ul {
+          padding: 0;
+          flex-direction: row;
+          justify-content: start;
+
+          li {
+            margin-right: 2rem;
+          }
+        }
+
+        a {
+          position: relative;
+          font-size: 2.75rem;
+          font-weight: 200;
+          transition: all 0.3s;
+          z-index: 999;
+
+          &:hover {
+            text-shadow: 0px 0px 20px #ffffff;
+          }
+        }
+      }
+    }
+
+    &__image {
+      background: var(--bodyBg);
+      overflow: hidden;
+
+      & > div {
+        position: relative;
+
+        img {
+          &:first-of-type {
+            opacity: 0;
+            animation: show 0.5s forwards;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+          }
+
+          &:last-of-type {
+            position: absolute;
+            top: 7%;
+            left: calc(50% - (396px / 2));
+            height: 70%;
+            width: 396px;
+            object-fit: cover;
+            object-position: center center;
+            animation: showImage 0.5s forwards;
+            z-index: 500;
+          }
+        }
+      }
+    }
+
+    &__close {
+      position: absolute;
+      top: 1.75rem;
+      right: 4.875rem;
+      font-family: 'EngraversGothic BT', sans-serif;
+      background: none;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      color: var(--white);
+      text-transform: uppercase;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.marquee {
+  position: absolute;
+  height: 120px;
+  width: 100%;
+  top: calc(50% - 120px / 2);
+  left: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  animation: marquee 7s ease-out forwards;
+
+  span {
+    width: 90%;
+    flex-shrink: 0;
+    text-align: center;
+    font-family: 'EngraversGothic BT', sans-serif;
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: var(--white);
+  }
+}
+
+.tabItem {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+@keyframes show {
+  to {
+    opacity: 0.3;
+  }
+}
+
+@keyframes showImage {
+  to {
+    object-position: right bottom;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -175%;
   }
 }
