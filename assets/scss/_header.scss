@@ -10,19 +10,6 @@
 
 .logo {
   display: flex;
-  flex: 1;
-
-  &__image {
-    flex: 0 1 200px;
-    max-width: 200px;
-    height: auto;
-
-    @media (max-width: 460px) {
-      flex: 0 0 105px;
-      max-width: 105px;
-      height: auto;
-    }
-  }
 
   &::before {
     content: '';
