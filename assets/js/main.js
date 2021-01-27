@@ -10,5 +10,5 @@ initMenuModal();
 import initFormEvents from './modules/formEvents';
 initFormEvents();
 
-import initAutoScroll from './modules/autoScroll';
-initAutoScroll(40);
+// import initAutoScroll from './modules/autoScroll';
+// initAutoScroll(40);
