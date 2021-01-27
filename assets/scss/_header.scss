@@ -12,9 +12,15 @@
   display: flex;
 
   &__image {
-    flex: 0 0 200px;
+    flex: 0 1 200px;
     max-width: 200px;
     height: auto;
+
+    @media (max-width: 460px) {
+      flex: 0 1 105px;
+      max-width: 105px;
+      height: auto;
+    }
   }
 
   &::before {
