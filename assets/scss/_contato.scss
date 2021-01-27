@@ -1,0 +1,204 @@
+.contato {
+  padding-top: 3.625rem;
+  padding-bottom: 5.75rem;
+  background: url('./images/contato/contato-bg-1.png') no-repeat center center;
+  background-size: cover;
+  animation: bgAnime 5s forwards;
+  animation-delay: 2s;
+
+  &__form {
+    overflow: hidden;
+    background: #333;
+    max-width: 796px;
+    width: 100%;
+    margin-left: auto;
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+    padding-left: 9.375rem;
+    padding-right: 5rem;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
+
+    h1 {
+      color: #828282;
+      font-size: 1.875rem;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      position: relative;
+
+      &::before {
+        content: '';
+        display: block;
+        width: 120px;
+        height: 1px;
+        background: var(--white);
+        position: absolute;
+        top: calc(1.875rem / 2);
+        left: -150px;
+      }
+    }
+
+    h2 {
+      font-size: 3.5rem;
+      font-weight: 200;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      font-size: 1.125rem;
+      letter-spacing: -0.02em;
+      line-height: 2.5;
+      margin-bottom: 1rem;
+    }
+
+    &--block {
+      position: relative;
+
+      label {
+        position: absolute;
+        left: 10px;
+        top: 1.125rem;
+        font-size: 1.125rem;
+        color: #828282;
+        cursor: text;
+        transition: all 0.3s;
+        background: #333;
+        display: block;
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+
+        &.active {
+          top: -0.625rem;
+          color: var(--wihte);
+          text-shadow: 0px 0px 20px #ffffff;
+        }
+      }
+
+      input {
+        display: block;
+        width: 100%;
+        padding: 1rem 2rem;
+        font-size: 1.125rem;
+        background: none;
+        border: 2px solid var(--white);
+        border-radius: 5px;
+        margin-bottom: 1.875rem;
+        color: var(--white);
+        transition: all 0.3s;
+
+        &:focus {
+          outline: none;
+          box-shadow: 0px 0px 5px var(--white);
+
+          & + label {
+            top: -0.625rem;
+            color: var(--wihte);
+            text-shadow: 0px 0px 20px #ffffff;
+          }
+        }
+        &:hover {
+          outline: none;
+          box-shadow: 0px 0px 5px var(--white);
+        }
+      }
+
+      textarea {
+        display: block;
+        width: 100%;
+        padding: 1rem 2rem;
+        font-size: 1.125rem;
+        background: none;
+        border: 2px solid var(--white);
+        border-radius: 5px;
+        margin-bottom: 1.875rem;
+        color: var(--white);
+        height: 200px;
+        transition: all 0.3s;
+
+        &:focus {
+          outline: none;
+          box-shadow: 0px 0px 5px var(--white);
+
+          & + label {
+            top: -0.625rem;
+            color: var(--wihte);
+            text-shadow: 0px 0px 20px #ffffff;
+          }
+        }
+        &:hover {
+          outline: none;
+          box-shadow: 0px 0px 5px var(--white);
+        }
+      }
+    }
+
+    select {
+      background-color: #333;
+      background-image: url('./images/select-arrow.svg');
+      background-repeat: no-repeat;
+      background-position: right 1.5rem center;
+      background-size: 20px;
+      color: var(--white);
+      display: block;
+      width: 100%;
+      padding: 1rem 2rem;
+      font-size: 1.125rem;
+      border: 2px solid var(--white);
+      border-radius: 5px;
+      margin-bottom: 1.875rem;
+      color: var(--white);
+      transition: all 0.3s;
+      appearance: none;
+
+      &:focus {
+        outline: none;
+        box-shadow: 0px 0px 5px var(--white);
+      }
+
+      &:hover {
+        outline: none;
+        box-shadow: 0px 0px 5px var(--white);
+      }
+
+      &:required {
+        &:invalid {
+          color: #828282;
+        }
+      }
+    }
+
+    button {
+      color: var(--white);
+      background: none;
+      border: none;
+      display: block;
+      width: 100%;
+      text-align: center;
+      font-size: 1.25rem;
+      letter-spacing: -0.02em;
+      cursor: pointer;
+      border-bottom: 1px solid var(--white);
+      padding-top: 1.625rem;
+      padding-bottom: 1.375rem;
+      margin-top: 2.5rem;
+      transition: all 0.3s;
+
+      &:focus {
+        outline: none;
+        text-shadow: 0px 0px 20px #ffffff;
+      }
+
+      &:hover {
+        outline: none;
+        text-shadow: 0px 0px 20px #ffffff;
+      }
+    }
+  }
+}
+
+@keyframes bgAnime {
+  to {
+    background-image: url('./images/contato/contato-bg-2.png');
+  }
+}

@@ -6,3 +6,6 @@ initTabMenu();
 
 import initMenuModal from './modules/menuModal';
 initMenuModal();
+
+import initFormEvents from './modules/formEvents';
+initFormEvents();
