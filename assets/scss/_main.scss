@@ -5,13 +5,29 @@
 
   @media (max-width: 767px) {
     grid-template-columns: 100%;
-    grid-template-rows: repeat(3, 100vh);
+    grid-template-rows: repeat(3, 400px);
   }
 
   section {
     position: relative;
     background: #111;
     overflow: hidden;
+
+    &:hover {
+      img {
+        animation: scaleImage 2s forwards;
+      }
+
+      h1 {
+        font-size: 3.125rem;
+        text-shadow: 0px 0px 20px var(--white);
+        transition: all 2s;
+
+        @media (max-width: 767px) {
+          font-size: 2.125rem;
+        }
+      }
+    }
 
     img {
       opacity: 0.3;
@@ -22,10 +38,6 @@
 
       @media (max-width: 767px) {
         opacity: 1;
-      }
-
-      &:hover {
-        animation: scaleImage 0.5s forwards;
       }
     }
 
@@ -39,22 +51,11 @@
       font-weight: 200;
       letter-spacing: -0.02em;
       text-transform: uppercase;
-      transition: all 0.2s;
       margin: 0;
+      transition: none;
 
       @media (max-width: 767px) {
         font-size: 2rem;
-      }
-    }
-
-    &:hover {
-      h1 {
-        font-size: 3.125rem;
-        text-shadow: 0px 0px 20px var(--white);
-
-        @media (max-width: 767px) {
-          font-size: 2.125rem;
-        }
       }
     }
   }
@@ -128,7 +129,7 @@
 
 @keyframes scaleImage {
   to {
-    transform: scale(1.5);
+    transform: scale(1.2);
     opacity: 1;
   }
 }
