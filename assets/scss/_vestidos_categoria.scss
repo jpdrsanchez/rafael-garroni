@@ -6,13 +6,17 @@
 
   h1 {
     color: #828282;
-    font-size: 1.875rem;
+    font-size: 1.5rem;
     font-weight: 400;
     text-transform: uppercase;
     margin-bottom: 1.875rem;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media (min-width: 768px) {
+      font-size: 1.875rem;
+    }
 
     &::after {
       content: '';
@@ -23,6 +27,11 @@
       height: 1px;
       background-color: var(--white);
       margin-left: 1.75rem;
+
+      @media (max-width: 575px) {
+        width: 50px;
+        margin-left: 0.75rem;
+      }
     }
 
     &::before {
@@ -32,16 +41,25 @@
       height: 1px;
       background-color: var(--white);
       margin-right: 1.75rem;
+
+      @media (max-width: 575px) {
+        width: 50px;
+        margin-left: 0.75rem;
+      }
     }
   }
 
   h2 {
-    font-size: 6rem;
+    font-size: 4rem;
     font-weight: 200;
     line-height: 1;
     letter-spacing: -0.02em;
     text-transform: uppercase;
     margin-bottom: 5.625rem;
+
+    @media (min-width: 768px) {
+      font-size: 6rem;
+    }
   }
 
   &__wrapper {
@@ -50,18 +68,50 @@
     column-gap: 7%;
     padding-left: 8.3333337%;
     padding-right: 8.3333337%;
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+      padding: 0 0.75rem;
+      max-width: 540px;
+      margin: 0 auto;
+    }
+    @media (min-width: 768px) and (max-width: 991px) {
+      grid-template-columns: 1fr;
+      padding: 0 0.75rem;
+      max-width: 720px;
+      margin: 0 auto;
+    }
   }
 
   &__column {
+    @media (max-width: 575px) {
+      display: grid;
+      grid-template-columns: 1fr;
+      &:not(:first-of-type) {
+        margin-top: 1.25rem;
+      }
+    }
+
+    @media (min-width: 576px) and (max-width: 991px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+
     &:nth-child(2) {
-      margin-top: 5rem;
+      @media (min-width: 992px) {
+        margin-top: 5rem;
+      }
     }
   }
 
   &__item {
-    height: 574px;
+    height: 450px;
     overflow: hidden;
     background-color: #333;
+
+    @media (min-width: 1200px) {
+      height: 574px;
+    }
 
     a {
       display: block;
