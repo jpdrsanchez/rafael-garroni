@@ -131,6 +131,10 @@
         column-gap: 2.5rem;
         row-gap: 3.125rem;
 
+        @media (max-width: 991px) {
+          height: 400px;
+        }
+
         img {
           &:nth-child(1) {
             grid-column: 1;
@@ -163,6 +167,10 @@
         grid-template-columns: 2fr 1fr;
         column-gap: 2.5rem;
         row-gap: 3.125rem;
+
+        @media (max-width: 991px) {
+          height: 400px;
+        }
 
         img {
           &:first-child {
