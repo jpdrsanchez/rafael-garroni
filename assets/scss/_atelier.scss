@@ -123,17 +123,18 @@
     &.locais-sp {
       margin-bottom: 4rem;
       .content {
-        padding-right: 2rem;
+        padding-left: 2rem;
+        @media (max-width: 991px) {
+          text-align: center;
+          padding-left: 0;
+          margin-bottom: 2rem;
+        }
       }
       .atelier__grid {
         display: grid;
         grid-template-columns: 1fr 2fr;
         column-gap: 2.5rem;
         row-gap: 3.125rem;
-
-        @media (max-width: 991px) {
-          height: 400px;
-        }
 
         img {
           &:nth-child(1) {
@@ -161,16 +162,17 @@
       .content {
         text-align: right;
         padding-right: 2rem;
+        @media (max-width: 991px) {
+          text-align: center;
+          padding-right: 0;
+          margin-bottom: 2rem;
+        }
       }
       .atelier__grid {
         display: grid;
         grid-template-columns: 2fr 1fr;
         column-gap: 2.5rem;
         row-gap: 3.125rem;
-
-        @media (max-width: 991px) {
-          height: 400px;
-        }
 
         img {
           &:first-child {
