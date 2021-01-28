@@ -3,12 +3,33 @@ const initFormEvents = () => {
   const numbers = document.querySelector('[data-number]');
 
   if (numbers) {
-    const handleNumber = (event) => {
-      if (event.currentTarget.value.length > 11) {
-        event.currentTarget.value = event.currentTarget.value.slice(0, 11);
-      }
+    const mask = (event) => {
+      const element = event.currentTarget;
+      setTimeout(() => {
+        let v = mphone(element.value);
+        if (v != element.value) {
+          element.value = v;
+        }
+      }, 1);
     };
-    numbers.addEventListener('keyup', handleNumber);
+
+    const mphone = (v) => {
+      let r = v.replace(/\D/g, '');
+      r = r.replace(/^0/, '');
+      if (r.length > 10) {
+        r = r.replace(/^(\d\d)(\d{5})(\d{4}).*/, '($1) $2-$3');
+      } else if (r.length > 5) {
+        r = r.replace(/^(\d\d)(\d{4})(\d{0,4}).*/, '($1) $2-$3');
+      } else if (r.length > 2) {
+        r = r.replace(/^(\d\d)(\d{0,5})/, '($1) $2');
+      } else {
+        r = r.replace(/^(\d*)/, '($1');
+      }
+      return r;
+    };
+
+    numbers.addEventListener('keypress', mask);
+    numbers.addEventListener('blur', mask);
   }
 
   if (inputs.length)
