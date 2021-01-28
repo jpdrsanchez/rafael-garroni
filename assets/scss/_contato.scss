@@ -208,9 +208,9 @@
       color: var(--white);
       background: none;
       border: none;
-      display: block;
+      // display: block;
       width: 100%;
-      text-align: center;
+      // text-align: center;
       font-size: 1.25rem;
       letter-spacing: -0.02em;
       cursor: pointer;
@@ -218,6 +218,29 @@
       margin-top: 2.5rem;
       transition: all 0.3s;
       height: 56px;
+      overflow: hidden;
+
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 56px;
+        transition: all 0.5s;
+      }
+
+      &::after {
+        content: 'Entre em contato';
+        display: flex;
+        width: 100%;
+        height: 56px;
+        border: 2px solid var(--white);
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.5s;
+        transform: translateY(-2px);
+      }
 
       &:focus {
         outline: none;
@@ -226,7 +249,14 @@
 
       &:hover {
         outline: none;
-        text-shadow: 0px 0px 20px #ffffff;
+
+        span {
+          transform: translateY(-200%);
+        }
+
+        &::after {
+          transform: translateY(-100%);
+        }
       }
     }
   }
