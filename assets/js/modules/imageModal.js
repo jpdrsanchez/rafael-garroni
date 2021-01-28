@@ -1,16 +1,25 @@
 const initImageModal = () => {
-  const image = document.querySelectorAll('[data-modal="image"]');
+  const images = document.querySelectorAll('[data-modal="image"]');
+  const modal = document.querySelector('#modal-image');
+  const modalImage = document.querySelector('#modal-image img');
+  const closeModal = document.querySelector('#close');
 
-  if (image.length) {
-    const createElement = (url) => {
-      const modalWrapper = document.createElement('div');
-      modalWrapper.style =
-        'position: fixed; top: 0; left: 0; width: 100vw; heigth: 100vh; background: rgba(0,0,0,.3); z-index: 9999;';
-      modalWrapper.innerHTML = `<img src=${url} alt="image" style="display: block; max-width: 100%" />`;
+  if (images.length && closeModal && modal && modalImage) {
+    const handleModal = (event) => {
+      const imageUrl = event.currentTarget.getAttribute('src');
+      modalImage.setAttribute('src', imageUrl);
+      modal.classList.add('active');
+    };
+    images.forEach((image) => {
+      image.addEventListener('click', handleModal);
+    });
+
+    const handleClose = () => {
+      modal.classList.remove('active');
     };
 
-    const handleModal = () => {};
-
-    image.addEventListener('click', handleModal);
+    closeModal.addEventListener('click', handleClose);
   }
 };
+
+export default initImageModal;

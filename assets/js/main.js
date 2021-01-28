@@ -12,3 +12,6 @@ initFormEvents();
 
 import initAutoScroll from './modules/autoScroll';
 initAutoScroll(40);
+
+import initImageModal from './modules/imageModal';
+initImageModal();
