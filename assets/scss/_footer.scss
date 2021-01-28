@@ -4,6 +4,7 @@
   &__content {
     img {
       margin-bottom: 3.75rem;
+      max-width: 200px;
       @media (max-width: 1199px) {
         margin-right: auto;
         margin-left: auto;
