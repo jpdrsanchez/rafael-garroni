@@ -1,0 +1,47 @@
+.obrigado {
+  margin-top: 4rem;
+  margin-bottom: 11rem;
+  a {
+    display: block;
+    text-align: center;
+    margin: 4rem auto 1.375rem auto;
+    font-size: 1.25rem;
+    letter-spacing: -0.02em;
+    height: 56px;
+    overflow: hidden;
+
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 56px;
+      transition: all 0.5s;
+    }
+
+    &::after {
+      content: 'Voltar à home';
+      display: flex;
+      width: 100%;
+      height: 56px;
+      border: 2px solid var(--white);
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.5s;
+      transform: translateY(-2px);
+    }
+
+    &:hover {
+      outline: none;
+
+      span {
+        transform: translateY(-200%);
+      }
+
+      &::after {
+        transform: translateY(-100%);
+      }
+    }
+  }
+}
