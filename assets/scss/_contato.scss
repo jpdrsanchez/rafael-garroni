@@ -25,8 +25,8 @@
     @media (max-width: 575px) {
       max-width: 100%;
       margin: 0 auto;
-      padding-left: 1rem;
-      padding-right: 1rem;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
     }
 
     @media (min-width: 576px) and (max-width: 767px) {
@@ -74,6 +74,7 @@
 
       @media (max-width: 767px) {
         font-size: 2rem;
+        margin-bottom: 2rem;
       }
     }
 
@@ -85,6 +86,7 @@
 
       @media (max-width: 767px) {
         font-size: 1rem;
+        margin-bottom: 2rem;
       }
     }
 
@@ -122,6 +124,10 @@
         margin-bottom: 1.875rem;
         color: var(--white);
         transition: all 0.3s;
+
+        @media (max-width: 767px) {
+          margin-bottom: 2.5rem;
+        }
 
         &:focus {
           outline: none;
@@ -186,6 +192,10 @@
       color: var(--white);
       transition: all 0.3s;
       appearance: none;
+
+      @media (max-width: 767px) {
+        margin-bottom: 2.5rem;
+      }
 
       &:focus {
         outline: none;

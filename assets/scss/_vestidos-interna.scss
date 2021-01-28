@@ -91,11 +91,17 @@
 
     @media (max-width: 575px) {
       grid-template-columns: 1fr;
-      max-width: 300px;
+      max-width: 400px;
       margin: 0 auto;
     }
 
     img {
+      @media (max-width: 575px) {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
       &:nth-of-type(1) {
         animation: showImageCardsOne 0.5s forwards;
       }

@@ -14,11 +14,15 @@ const initImageModal = () => {
       image.addEventListener('click', handleModal);
     });
 
-    const handleClose = () => {
-      modal.classList.remove('active');
+    const handleClose = (event) => {
+      if (
+        event.target === event.currentTarget ||
+        event.currentTarget.contains(closeModal)
+      )
+        modal.classList.remove('active');
     };
 
-    closeModal.addEventListener('click', handleClose);
+    modal.addEventListener('click', handleClose);
   }
 };
 

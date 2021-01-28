@@ -17,26 +17,35 @@
 
   &__logo {
     margin: auto;
-    display: flex;
-    justify-content: center;
     max-width: 100%;
-    align-items: flex-end;
-  }
+    display: flex;
 
-  &__image {
-    &:nth-of-type(1) {
-      margin-right: 1.5rem;
-      animation: toLeft 2s forwards 2s;
-      flex: 1;
+    div {
+      max-width: 100%;
+
+      &:first-of-type {
+        margin-right: 1rem;
+        animation: toLeft 2s forwards 2s;
+      }
+      &:last-of-type {
+        margin-left: 1rem;
+        animation: toRight 2s forwards 2s;
+      }
     }
 
-    &:nth-of-type(2) {
-      animation: toRight 2s forwards 2s;
-      flex: 1;
+    img {
+      &:nth-of-type(1) {
+        margin-right: 1rem;
+      }
+
+      &:nth-of-type(2) {
+        margin-left: 1rem;
+      }
     }
 
     img {
       margin: 0;
+      width: 100%;
     }
   }
 
