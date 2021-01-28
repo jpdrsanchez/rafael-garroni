@@ -119,12 +119,12 @@
       &::before {
         content: '';
         display: block;
-        width: 120px;
+        width: 150px;
         height: 1px;
         background-color: var(--white);
         position: absolute;
         top: calc(44px / 2);
-        left: calc(-120px - 1.5rem);
+        left: calc(-150px - 1.5rem);
         z-index: 200;
       }
     }
