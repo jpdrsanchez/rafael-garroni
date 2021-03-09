@@ -15,3 +15,6 @@ initAutoScroll(40);
 
 import initImageModal from './modules/imageModal';
 initImageModal();
+
+import initListPadding from './modules/listPadding';
+initListPadding();

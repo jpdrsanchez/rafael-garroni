@@ -81,54 +81,48 @@
   }
 
   &__wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
     column-gap: 7%;
     padding-left: 8.3333337%;
     padding-right: 8.3333337%;
+
+    @media (min-width: 992px) {
+      column-count: 3;
+    }
+
     @media (max-width: 767px) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       grid-template-columns: 1fr;
       padding: 0 0.75rem;
       max-width: 540px;
       margin: 0 auto;
     }
     @media (min-width: 768px) and (max-width: 991px) {
-      grid-template-columns: 1fr;
       padding: 0 0.75rem;
       max-width: 720px;
       margin: 0 auto;
     }
   }
 
-  &__column {
-    @media (max-width: 575px) {
-      display: grid;
-      grid-template-columns: 1fr;
-      &:not(:first-of-type) {
-        margin-top: 1.25rem;
-      }
-    }
-
-    @media (min-width: 576px) and (max-width: 991px) {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.25rem;
-    }
-
-    &:nth-child(2) {
-      @media (min-width: 992px) {
-        margin-top: 5rem;
-      }
-    }
-  }
-
   &__item {
-    height: 450px;
     overflow: hidden;
-    background-color: #333;
+    break-inside: avoid;
 
-    @media (min-width: 1200px) {
-      height: 574px;
+    &.space {
+      & > div {
+        @media (min-width: 992px) {
+          margin-top: 6.875rem;
+        }
+      }
+    }
+
+    & > div {
+      background-color: #333;
+      height: 450px;
+
+      @media (min-width: 1200px) {
+        height: 574px;
+      }
     }
 
     a {
@@ -142,7 +136,9 @@
     }
 
     &--text {
-      padding: 1.25rem;
+      & > div {
+        padding: 1.25rem;
+      }
 
       h3 {
         font-size: 2rem;
